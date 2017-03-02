@@ -196,6 +196,7 @@ public class Interfaz extends javax.swing.JFrame {
         etiquetaDado2.setText(cadena2);
         String cadena3=Integer.toString(resultadodados);
         etiquetaResultado.setText(cadena3);
+        if(resultadodados==2)
         
         //this.etiquetaDado1.setText(Integer.toString(this.dadoInterfaz.valor));
         //this.etiquetaDado2.setText(Integer.toString(this.dadoInterfaz2.valor));

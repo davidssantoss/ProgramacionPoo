@@ -20,5 +20,16 @@ public class Dado {
         Random rnd=new Random();
         valor=rnd.nextInt(6)+1;
     }
+      /**
+     * si la suma de los dados es 
+     * 2->pierde la apuesta
+     * 3->pierde el doble
+     * 7->gana el doble
+     * 11->no pierde nada
+     * 12->gana la apuesta
+     * otros valores->pierde el 1.5 de la apuesta
+     * 
+     */
+    
     
 }
