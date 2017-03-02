@@ -120,10 +120,23 @@ public class Interfaz extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-        //etiquetaDado1.setText(String.valueOf(dadoInterfaz.lanzar()));
-        dadoInterfaz.valor=etiquetaDado1.setText(String.valueOf(dadoInterfaz.lanzar()));
-                
-        //etiquetaDado2.setText(String.valueOf(dadoInterfaz2.lanzar()));
+        
+        this.dadoInterfaz.lanzar();
+        this.dadoInterfaz2.lanzar();
+        
+        //int valor1=this.dadoInterfaz.valor;
+        //int valor2=this.dadoInterfaz2.valor;
+        
+        //String cadena1= Integer.toString(valor1);
+        //etiquetaDado1.setText(cadena1);
+        
+        this.etiquetaDado1.setText(Integer.toString(this.dadoInterfaz.valor));
+        this.etiquetaDado2.setText(Integer.toString(this.dadoInterfaz2.valor));
+        
+        
+        
+        
+        
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
