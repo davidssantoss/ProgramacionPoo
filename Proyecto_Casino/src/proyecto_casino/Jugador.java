@@ -7,11 +7,12 @@ package proyecto_casino;
  */
 public class Jugador {
     
-    double Apuesta=1000000000;
+    double Apuesta;
     double Billetera;
     double resultado;
     
     public double operar(){
+        
         resultado=Billetera-Apuesta;       
     return resultado;
             }
