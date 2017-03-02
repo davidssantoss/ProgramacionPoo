@@ -14,6 +14,7 @@ public class Interfaz extends javax.swing.JFrame {
     Dado dadoInterfaz2;
     Jugador pepitoInterfaz;
     
+    
 
     /**
      * Creates new form Interfaz
@@ -36,13 +37,14 @@ public class Interfaz extends javax.swing.JFrame {
         etiquetaDado2 = new javax.swing.JTextField();
         botonLanzar = new javax.swing.JButton();
         botonGuardar = new javax.swing.JButton();
-        jTextField3 = new javax.swing.JTextField();
+        etiquetaResultado = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         etiquetaApuesta = new javax.swing.JTextField();
         etiquetaBilletera = new javax.swing.JTextField();
-        EtiquetaMensaje = new javax.swing.JTextField();
+        etiquetaMensaje = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
 
         jTextField5.setText("jTextField5");
 
@@ -85,38 +87,44 @@ public class Interfaz extends javax.swing.JFrame {
             }
         });
 
-        EtiquetaMensaje.addActionListener(new java.awt.event.ActionListener() {
+        etiquetaMensaje.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                EtiquetaMensajeActionPerformed(evt);
+                etiquetaMensajeActionPerformed(evt);
             }
         });
+
+        jLabel4.setText("Resultado:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(botonLanzar)
+                        .addGap(86, 86, 86))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(57, 57, 57)
                         .addComponent(etiquetaDado1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(34, 34, 34)
                         .addComponent(etiquetaDado2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(86, Short.MAX_VALUE)
-                        .addComponent(botonLanzar)
-                        .addGap(86, 86, 86)
-                        .addComponent(botonGuardar)))
-                .addGap(30, 30, 30))
+                        .addComponent(jLabel4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(etiquetaResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(botonGuardar))
+                .addGap(50, 50, 50))
             .addGroup(layout.createSequentialGroup()
                 .addGap(34, 34, 34)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(EtiquetaMensaje, javax.swing.GroupLayout.DEFAULT_SIZE, 186, Short.MAX_VALUE))
+                        .addComponent(etiquetaMensaje, javax.swing.GroupLayout.DEFAULT_SIZE, 186, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
@@ -132,9 +140,10 @@ public class Interfaz extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(41, 41, 41)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(etiquetaDado1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(etiquetaDado2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(etiquetaDado1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(etiquetaDado2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(etiquetaResultado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(18, 18, 18)
@@ -153,8 +162,8 @@ public class Interfaz extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(EtiquetaMensaje, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(59, Short.MAX_VALUE))
+                    .addComponent(etiquetaMensaje, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
 
         pack();
@@ -168,26 +177,32 @@ public class Interfaz extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_etiquetaApuestaActionPerformed
 
-    private void EtiquetaMensajeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EtiquetaMensajeActionPerformed
+    private void etiquetaMensajeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_etiquetaMensajeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_EtiquetaMensajeActionPerformed
+    }//GEN-LAST:event_etiquetaMensajeActionPerformed
 
+     
     private void botonLanzarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonLanzarMouseClicked
         this.dadoInterfaz.lanzar();
         this.dadoInterfaz2.lanzar();
         
-        //int valor1=this.dadoInterfaz.valor;
-        //int valor2=this.dadoInterfaz2.valor;
+        int valor1=this.dadoInterfaz.valor;
+        int valor2=this.dadoInterfaz2.valor;
+        int resultadodados=valor1+valor2;        
         
-        //String cadena1= Integer.toString(valor1);
-        //etiquetaDado1.setText(cadena1);
+        String cadena1= Integer.toString(valor1);
+        etiquetaDado1.setText(cadena1);
+        String cadena2= Integer.toString(valor2);
+        etiquetaDado2.setText(cadena2);
+        String cadena3=Integer.toString(resultadodados);
+        etiquetaResultado.setText(cadena3);
         
-        this.etiquetaDado1.setText(Integer.toString(this.dadoInterfaz.valor));
-        this.etiquetaDado2.setText(Integer.toString(this.dadoInterfaz2.valor));
+        //this.etiquetaDado1.setText(Integer.toString(this.dadoInterfaz.valor));
+        //this.etiquetaDado2.setText(Integer.toString(this.dadoInterfaz2.valor));
     }//GEN-LAST:event_botonLanzarMouseClicked
 
     private void botonGuardarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonGuardarMouseClicked
-        etiquetaBilletera.setText(String.valueOf(pepitoInterfaz.Billetera));
+        pepitoInterfaz.Billetera=Double.parseDouble(etiquetaBilletera.getText());
         pepitoInterfaz.Apuesta=Double.parseDouble(etiquetaApuesta.getText());
         etiquetaBilletera.setText(String.valueOf(pepitoInterfaz.operar()));
     }//GEN-LAST:event_botonGuardarMouseClicked
@@ -232,17 +247,18 @@ public class Interfaz extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField EtiquetaMensaje;
     private javax.swing.JButton botonGuardar;
     private javax.swing.JButton botonLanzar;
     private javax.swing.JTextField etiquetaApuesta;
     private javax.swing.JTextField etiquetaBilletera;
     private javax.swing.JTextField etiquetaDado1;
     private javax.swing.JTextField etiquetaDado2;
+    private javax.swing.JTextField etiquetaMensaje;
+    private javax.swing.JTextField etiquetaResultado;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JTextField jTextField5;
     // End of variables declaration//GEN-END:variables
 }
