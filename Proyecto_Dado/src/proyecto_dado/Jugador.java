@@ -11,9 +11,8 @@ public class Jugador {
     double Billetera=1000000000;
     
     public double operar(){
-        
-        
-        
-    }
+        double resultado=Billetera-Apuesta;       
+    return resultado;
+            }
     
 }

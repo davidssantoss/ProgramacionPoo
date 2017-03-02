@@ -36,7 +36,7 @@ public class Interfaz extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         etiquetaApuesta = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
+        etiquetaBilletera = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jTextField5 = new javax.swing.JTextField();
         botonGuardar = new javax.swing.JButton();
@@ -99,7 +99,7 @@ public class Interfaz extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel2)
                                 .addGap(18, 18, 18)
-                                .addComponent(jTextField4))
+                                .addComponent(etiquetaBilletera))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel1)
                                 .addGap(18, 18, 18)
@@ -126,7 +126,7 @@ public class Interfaz extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(etiquetaBilletera, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
@@ -209,12 +209,12 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JButton botonGuardar;
     private javax.swing.JButton botonlanzar;
     private javax.swing.JTextField etiquetaApuesta;
+    private javax.swing.JTextField etiquetaBilletera;
     private javax.swing.JTextField etiquetaDado1;
     private javax.swing.JTextField etiquetaDado2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     // End of variables declaration//GEN-END:variables
 }
