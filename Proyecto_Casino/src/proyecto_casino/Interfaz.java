@@ -208,13 +208,48 @@ public class Interfaz extends javax.swing.JFrame {
           etiquetaMensaje.setText("Ganas la apuesta");
         }
         //1,4,5,6,8,9,10
-        if(resultadodados==1 && resultadodados==4 && resultadodados==5 && resultadodados==6 && resultadodados==8 && resultadodados==9 && resultadodados==10){
+        if(resultadodados==1){
             pepitoInterfaz.Billetera=Double.parseDouble(etiquetaBilletera.getText());
           pepitoInterfaz.Apuesta=Double.parseDouble(etiquetaApuesta.getText());
           etiquetaBilletera.setText(String.valueOf(pepitoInterfaz.resultado_dados2()));
-          etiquetaMensaje.setText("Pierdes la apuesta");
+          etiquetaMensaje.setText("Pierdes el 3/2 de la apuesta");
         }
-        
+        if(resultadodados==4){
+            pepitoInterfaz.Billetera=Double.parseDouble(etiquetaBilletera.getText());
+          pepitoInterfaz.Apuesta=Double.parseDouble(etiquetaApuesta.getText());
+          etiquetaBilletera.setText(String.valueOf(pepitoInterfaz.resultado_dados2()));
+          etiquetaMensaje.setText("Pierdes el 3/2 de la apuesta");
+        }
+        if(resultadodados==5){
+            pepitoInterfaz.Billetera=Double.parseDouble(etiquetaBilletera.getText());
+          pepitoInterfaz.Apuesta=Double.parseDouble(etiquetaApuesta.getText());
+          etiquetaBilletera.setText(String.valueOf(pepitoInterfaz.resultado_dados2()));
+          etiquetaMensaje.setText("Pierdes el 3/2 de la apuesta");
+        }
+        if(resultadodados==6){
+            pepitoInterfaz.Billetera=Double.parseDouble(etiquetaBilletera.getText());
+          pepitoInterfaz.Apuesta=Double.parseDouble(etiquetaApuesta.getText());
+          etiquetaBilletera.setText(String.valueOf(pepitoInterfaz.resultado_dados2()));
+          etiquetaMensaje.setText("Pierdes el 3/2 de la apuesta");
+        }
+        if(resultadodados==8){
+            pepitoInterfaz.Billetera=Double.parseDouble(etiquetaBilletera.getText());
+          pepitoInterfaz.Apuesta=Double.parseDouble(etiquetaApuesta.getText());
+          etiquetaBilletera.setText(String.valueOf(pepitoInterfaz.resultado_dados2()));
+          etiquetaMensaje.setText("Pierdes el 3/2 de la apuesta");
+        }
+        if(resultadodados==9){
+            pepitoInterfaz.Billetera=Double.parseDouble(etiquetaBilletera.getText());
+          pepitoInterfaz.Apuesta=Double.parseDouble(etiquetaApuesta.getText());
+          etiquetaBilletera.setText(String.valueOf(pepitoInterfaz.resultado_dados2()));
+          etiquetaMensaje.setText("Pierdes el 3/2 de la apuesta");
+        }
+        if(resultadodados==10){
+            pepitoInterfaz.Billetera=Double.parseDouble(etiquetaBilletera.getText());
+          pepitoInterfaz.Apuesta=Double.parseDouble(etiquetaApuesta.getText());
+          etiquetaBilletera.setText(String.valueOf(pepitoInterfaz.resultado_dados2()));
+          etiquetaMensaje.setText("Pierdes el 3/2 de la apuesta");
+        }
         //this.etiquetaDado1.setText(Integer.toString(this.dadoInterfaz.valor));
         //this.etiquetaDado2.setText(Integer.toString(this.dadoInterfaz2.valor));
     }//GEN-LAST:event_botonLanzarMouseClicked
