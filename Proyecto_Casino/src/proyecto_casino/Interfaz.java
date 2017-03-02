@@ -43,7 +43,7 @@ public class Interfaz extends javax.swing.JFrame {
         etiquetaApuesta = new javax.swing.JTextField();
         etiquetaBilletera = new javax.swing.JTextField();
         etiquetaMensaje = new javax.swing.JTextField();
-        botonResultado = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
 
         jTextField5.setText("jTextField5");
 
@@ -85,12 +85,7 @@ public class Interfaz extends javax.swing.JFrame {
             }
         });
 
-        botonResultado.setText("Resultado:");
-        botonResultado.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                botonResultadoMouseClicked(evt);
-            }
-        });
+        jLabel4.setText("Resultado: ");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -103,9 +98,9 @@ public class Interfaz extends javax.swing.JFrame {
                         .addComponent(etiquetaDado1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(34, 34, 34)
                         .addComponent(etiquetaDado2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(botonResultado)
-                        .addGap(4, 4, 4)
+                        .addGap(50, 50, 50)
+                        .addComponent(jLabel4)
+                        .addGap(18, 18, 18)
                         .addComponent(etiquetaResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(34, 34, 34)
@@ -124,7 +119,7 @@ public class Interfaz extends javax.swing.JFrame {
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                         .addComponent(etiquetaBilletera, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
                                         .addComponent(etiquetaApuesta)))))))
-                .addContainerGap(116, Short.MAX_VALUE))
+                .addContainerGap(92, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -134,7 +129,7 @@ public class Interfaz extends javax.swing.JFrame {
                     .addComponent(etiquetaDado1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(etiquetaDado2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(etiquetaResultado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(botonResultado))
+                    .addComponent(jLabel4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(botonLanzar)
                 .addGap(38, 38, 38)
@@ -181,7 +176,45 @@ public class Interfaz extends javax.swing.JFrame {
         String cadena2= Integer.toString(valor2);
         etiquetaDado2.setText(cadena2);
         String cadena3=Integer.toString(resultadodados);
-        etiquetaResultado.setText(cadena3);   
+        etiquetaResultado.setText(cadena3); 
+        if(resultadodados==2){
+            pepitoInterfaz.Billetera=Double.parseDouble(etiquetaBilletera.getText());
+          pepitoInterfaz.Apuesta=Double.parseDouble(etiquetaApuesta.getText());
+          etiquetaBilletera.setText(String.valueOf(pepitoInterfaz.resultado_dados2()));
+          etiquetaMensaje.setText("Pierdes la apuesta");
+        }
+        if(resultadodados==3){
+            pepitoInterfaz.Billetera=Double.parseDouble(etiquetaBilletera.getText());
+          pepitoInterfaz.Apuesta=Double.parseDouble(etiquetaApuesta.getText());
+          etiquetaBilletera.setText(String.valueOf(pepitoInterfaz.resultado_dados3()));
+          etiquetaMensaje.setText("Pierdes el doble de la apuesta");
+        }
+        if(resultadodados==7){
+            pepitoInterfaz.Billetera=Double.parseDouble(etiquetaBilletera.getText());
+          pepitoInterfaz.Apuesta=Double.parseDouble(etiquetaApuesta.getText());
+          etiquetaBilletera.setText(String.valueOf(pepitoInterfaz.resultado_dados7()));
+          etiquetaMensaje.setText("Ganas el doble de la apuesta");
+        }
+        if(resultadodados==11){
+            pepitoInterfaz.Billetera=Double.parseDouble(etiquetaBilletera.getText());
+          pepitoInterfaz.Apuesta=Double.parseDouble(etiquetaApuesta.getText());
+          etiquetaBilletera.setText(String.valueOf(pepitoInterfaz.resultado_dados11()));
+          etiquetaMensaje.setText("No pierdes nada");
+        }
+        if(resultadodados==12){
+            pepitoInterfaz.Billetera=Double.parseDouble(etiquetaBilletera.getText());
+          pepitoInterfaz.Apuesta=Double.parseDouble(etiquetaApuesta.getText());
+          etiquetaBilletera.setText(String.valueOf(pepitoInterfaz.resultado_dados12()));
+          etiquetaMensaje.setText("Ganas la apuesta");
+        }
+        //1,4,5,6,8,9,10
+        if(resultadodados==1 && resultadodados==4 && resultadodados==5 && resultadodados==6 && resultadodados==8 && resultadodados==9 && resultadodados==10){
+            pepitoInterfaz.Billetera=Double.parseDouble(etiquetaBilletera.getText());
+          pepitoInterfaz.Apuesta=Double.parseDouble(etiquetaApuesta.getText());
+          etiquetaBilletera.setText(String.valueOf(pepitoInterfaz.resultado_dados2()));
+          etiquetaMensaje.setText("Pierdes la apuesta");
+        }
+        
         //this.etiquetaDado1.setText(Integer.toString(this.dadoInterfaz.valor));
         //this.etiquetaDado2.setText(Integer.toString(this.dadoInterfaz2.valor));
     }//GEN-LAST:event_botonLanzarMouseClicked
@@ -189,11 +222,6 @@ public class Interfaz extends javax.swing.JFrame {
     private void botonLanzarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonLanzarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_botonLanzarActionPerformed
-
-    private void botonResultadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonResultadoMouseClicked
-        
-        
-    }//GEN-LAST:event_botonResultadoMouseClicked
 
     /**
      * @param args the command line arguments
@@ -232,7 +260,6 @@ public class Interfaz extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonLanzar;
-    private javax.swing.JButton botonResultado;
     private javax.swing.JTextField etiquetaApuesta;
     private javax.swing.JTextField etiquetaBilletera;
     private javax.swing.JTextField etiquetaDado1;
@@ -242,6 +269,7 @@ public class Interfaz extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JTextField jTextField5;
     // End of variables declaration//GEN-END:variables
 }
