@@ -26,6 +26,7 @@ public class Principal {
         
         miInterfaz.dadoInterfaz=dado1;
         miInterfaz.dadoInterfaz2=dado2;
+        miInterfaz.pepitoInterfaz=pepito;
         
     }
     

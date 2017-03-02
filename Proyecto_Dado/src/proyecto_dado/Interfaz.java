@@ -12,6 +12,7 @@ package proyecto_dado;
 public class Interfaz extends javax.swing.JFrame {
     Dado dadoInterfaz;
     Dado dadoInterfaz2;
+    Jugador pepitoInterfaz;
 
     /**
      * Creates new form Interfaz
@@ -29,27 +30,28 @@ public class Interfaz extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
+        botonlanzar = new javax.swing.JButton();
         etiquetaDado1 = new javax.swing.JTextField();
         etiquetaDado2 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        etiquetaApuesta = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jTextField4 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jTextField5 = new javax.swing.JTextField();
+        botonGuardar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setText("Lanzar");
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+        botonlanzar.setText("Lanzar");
+        botonlanzar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
+                botonlanzarMouseClicked(evt);
             }
         });
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        botonlanzar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                botonlanzarActionPerformed(evt);
             }
         });
 
@@ -59,13 +61,25 @@ public class Interfaz extends javax.swing.JFrame {
 
         jLabel3.setText("Mensaje: ");
 
+        botonGuardar.setText("Guardar apuesta");
+        botonGuardar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonGuardarMouseClicked(evt);
+            }
+        });
+        botonGuardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonGuardarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(143, 143, 143)
-                .addComponent(jButton1)
+                .addComponent(botonlanzar)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(32, 32, 32)
@@ -74,7 +88,7 @@ public class Interfaz extends javax.swing.JFrame {
                         .addComponent(jLabel3)
                         .addGap(18, 18, 18)
                         .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 76, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(etiquetaDado1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -89,7 +103,9 @@ public class Interfaz extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel1)
                                 .addGap(18, 18, 18)
-                                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(etiquetaApuesta, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(48, 48, 48)
+                        .addComponent(botonGuardar)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
@@ -100,11 +116,13 @@ public class Interfaz extends javax.swing.JFrame {
                     .addComponent(etiquetaDado1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(etiquetaDado2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton1)
-                .addGap(31, 31, 31)
+                .addComponent(botonlanzar)
+                .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel1)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(etiquetaApuesta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(botonGuardar)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
@@ -113,13 +131,13 @@ public class Interfaz extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(94, Short.MAX_VALUE))
+                .addContainerGap(92, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+    private void botonlanzarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonlanzarMouseClicked
         
         this.dadoInterfaz.lanzar();
         this.dadoInterfaz2.lanzar();
@@ -137,11 +155,20 @@ public class Interfaz extends javax.swing.JFrame {
         
         
         
-    }//GEN-LAST:event_jButton1MouseClicked
+    }//GEN-LAST:event_botonlanzarMouseClicked
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void botonlanzarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonlanzarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_botonlanzarActionPerformed
+
+    private void botonGuardarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonGuardarMouseClicked
+       pepitoInterfaz.Apuesta=Double.parseDouble(etiquetaApuesta.getText());
+       
+    }//GEN-LAST:event_botonGuardarMouseClicked
+
+    private void botonGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonGuardarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonGuardarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -179,13 +206,14 @@ public class Interfaz extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botonGuardar;
+    private javax.swing.JButton botonlanzar;
+    private javax.swing.JTextField etiquetaApuesta;
     private javax.swing.JTextField etiquetaDado1;
     private javax.swing.JTextField etiquetaDado2;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     // End of variables declaration//GEN-END:variables
